@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { FiAnchor, FiUser, FiLock } from "react-icons/fi";
-import { use } from "react";
 
 function Login() {
   const [inputData, setInputData] = useState({
@@ -10,9 +9,6 @@ function Login() {
     password: "",
     email: "",
   });
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
   const [signUP, setSignUp] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
