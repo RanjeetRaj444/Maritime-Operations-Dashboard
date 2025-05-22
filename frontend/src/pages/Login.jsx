@@ -41,13 +41,16 @@ function Login() {
     setLoading(true);
     if (signUP) {
       try {
-        await fetch("http://localhost:5000/user/register", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(inputData),
-        })
+        await fetch(
+          "https://maritime-operations-dashboard-backend.onrender.com/user/register",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(inputData),
+          }
+        )
           .then((response) => {
             return response.json();
           })
@@ -65,13 +68,16 @@ function Login() {
       }
     } else {
       try {
-        await fetch("http://localhost:5000/user/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(inputData),
-        })
+        await fetch(
+          "https://maritime-operations-dashboard-backend.onrender.com/user/login",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(inputData),
+          }
+        )
           .then((response) => {
             return response.json();
           })
@@ -127,7 +133,7 @@ function Login() {
                 </label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <FiUser className="h-5 w-5 text-gray-400" />
+                    <FiUser className="h-5 w-5 " />
                   </div>
                   <input
                     id="username"
