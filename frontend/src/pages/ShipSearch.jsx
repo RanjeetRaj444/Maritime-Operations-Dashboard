@@ -251,7 +251,7 @@ function ShipSearch() {
                     </td>
                     <td className="px-4 py-4 whitespace-nowrap text-right">
                       <button
-                        onClick={() => handleViewDetails(ship.id)}
+                        onClick={() => handleViewDetails(ship._id)}
                         className="btn btn-primary py-1 px-3 text-sm"
                       >
                         View Details
