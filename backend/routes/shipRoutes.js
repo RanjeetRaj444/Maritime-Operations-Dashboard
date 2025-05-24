@@ -3,7 +3,6 @@ const {
   fetchShips,
   getShipDetails,
 } = require("../controller/shipController.js");
-// const getShipDetails = require("../controller/shipController.js");
 
 const router = express.Router();
 
